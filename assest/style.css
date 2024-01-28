@@ -1,0 +1,94 @@
+*{
+    margin: 0  ;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: sans-serif;
+}
+body{
+    background-color: black;
+}
+main{
+    border: 3px solid lime;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#carousel{
+    width: 60%;
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+}
+#carousel figure img{
+    width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#carousel figure{
+    width: 100%;
+    height:100% ;
+    position: relative;
+}
+#carousel figure div{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    text-align: right;
+    color: white;
+}
+#carousel figure div h2{
+    margin:20px;
+}
+#carousel figure div p{
+    color: gray;
+}
+
+.pics{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    height:100% ;
+    position: relative;
+
+}
+.pics .up,
+.pics .down{
+    position: absolute;
+    color: white;
+    font-size: 2px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+    z-index: 1;
+    cursor: pointer;
+}
+.pics .up{
+ top:20px;
+ left:50%;
+ transform: translate(-50%);
+}
+.pics .down{
+    bottom:20px;
+    left:50%;
+    transform: translate(-50%);
+   }
+
+.pics .col {
+    height: calc(100% / 5);
+    color: white;
+}
+.pics .col figure{
+    height: calc(100% / 5);
+    opacity: 0.2;
+}
+.pics .col figure:hover{
+   cursor: pointer;
+   opacity: 0.6;
+}
+.pics .col figure.active{
+    opacity: 1;
+}
